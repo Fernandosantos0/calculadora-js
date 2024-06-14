@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* Importando a fonte interna */
+@font-face {
+    font-family: 'Digital 7';
+    src: url('../font/digital_7.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(60deg, rgba(0, 0, 0, -6),  15%, rgba(43, 43, 46, 0.801)), url('../images/imagem-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.dflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc {
+    flex-direction: column;
+    background-color: #EEE;
+    border: 3px solid #BBB;
+    width: 245px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-block-start: 26px;
+    margin-inline: auto;
+    z-index: 1000;
+}
+
+/* Título */
+.div_nome {
+    width: 230px;
+}
+
+.div_teclas {
+    flex-wrap: wrap;
+    width: 230px;
+    margin-top: 8px;
+}
+
+.tecla {
+    background-color: #AAA;
+    font-weight: bold;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #888;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.teclaOp {
+    color: white;
+    background-color: #F44 !important;
+    border-color: #800 !important;
+}
+
+/* DISPLAY */
+.div_display {
+    border: 1px solid red;
+    width: 230px;
+}
+
+.display {
+    width: 230px;
+    background-color: #8A8;
+    text-align: right;
+    padding: 5px;
+    font-family: 'Digital 7', monospace, 'Times New Roman', Times, serif;
+    font-size: 26px;
+}
