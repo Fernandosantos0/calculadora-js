@@ -4,9 +4,10 @@ const teclasNum = [...document.querySelectorAll('.num')];
 const teclasOp = [...document.querySelectorAll('.op')];
 const teclaRes = document.querySelector('.rest');
 const display = document.querySelector('.display');
-const ton = document.querySelector('#ton');
 const tlimpar = document.querySelector('#tlimpar');
 const tigual = document.querySelector('#tigual');
+const tcopy = document.querySelector('#tcopy');
+const teste = document.querySelector('#teste');
 
 let sinal = false;
 let decimal = false;
@@ -69,4 +70,13 @@ tigual.addEventListener('click', event => {
     const resultado = window.eval(display.innerHTML);
     
     display.innerHTML = resultado;
+});
+
+/* Funcionalidade para copia na área de transferência */
+tcopy.addEventListener('click', event => {
+    // navigator.clipboard.writeText(display.innerHTML);
+
+    teste.select();
+    teste.setSelectionRange(0, 99999); // Mobile
+    navigator.clipboard.writeText(teste.value);
 });
