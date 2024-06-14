@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Aulas 70, 71, 72 e 73 de JavaScript</title>
+        <title>Aulas 70, 71, 72, 73 e 74 de JavaScript</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <!-- css -->
         <link rel="stylesheet" href="css/estilos.css">
         <!-- JavaScript -->
@@ -12,37 +14,40 @@
     <body>
         
         <div id="calc" class="calc dflex">
-            <div class="div_nome dflex" id="div_nome">
-                <p>Calculadora CFB Cursos</p>
+            <div id="calc_principal" class="calc_principal">
+                <div class="div_nome dflex" id="div_nome">
+                    <p>Calculadora CFB Cursos</p>
+                </div>
+                <div class="div_display dflex" id="display">
+                    <p id="display" class="display">0</p>
+                </div>
+                <div class="div_teclas" id="div_teclas">
+                    <button id="tcopy" class="tecla teclaOp">COPY</button>
+                    <button id="tlimpar" class="tecla">CL</button>
+                    <button id="t(" class="tecla num">(</button>
+                    <button id="t)" class="tecla num">)</button>
+                    <button id="t7" class="tecla num">7</button>
+                    <button id="t8" class="tecla num">8</button>
+                    <button id="t9" class="tecla num">9</button>
+                    <button id="t+" class="tecla teclaOp op">+</button>
+                    <button id="t4" class="tecla num">4</button>
+                    <button id="t5" class="tecla num">5</button>
+                    <button id="t6" class="tecla num">6</button>
+                    <button id="t-" class="tecla teclaOp op">–</button>
+                    <button id="t1" class="tecla num">1</button>
+                    <button id="t2" class="tecla num">2</button>
+                    <button id="t3" class="tecla num">3</button>
+                    <button id="tx" class="tecla teclaOp op">x</button>
+                    <button id="t0" class="tecla num">0</button>
+                    <button id="tseparador" class="tecla num">,</button>
+                    <button id="tigual" class="tecla teclaOp rest">=</button>
+                    <button id="td" class="tecla teclaOp op">/</button>
+                </div>            
             </div>
-            <div class="div_display dflex" id="display">
-                <p id="display" class="display">0</p>
-            </div>
-            <div class="div_teclas" id="div_teclas">
-                <button id="tcopy" class="tecla teclaOp">COPY</button>
-                <button id="tlimpar" class="tecla">CL</button>
-                <button id="t(" class="tecla num">(</button>
-                <button id="t)" class="tecla num">)</button>
-                <button id="t7" class="tecla num">7</button>
-                <button id="t8" class="tecla num">8</button>
-                <button id="t9" class="tecla num">9</button>
-                <button id="t+" class="tecla teclaOp op">+</button>
-                <button id="t4" class="tecla num">4</button>
-                <button id="t5" class="tecla num">5</button>
-                <button id="t6" class="tecla num">6</button>
-                <button id="t-" class="tecla teclaOp op">–</button>
-                <button id="t1" class="tecla num">1</button>
-                <button id="t2" class="tecla num">2</button>
-                <button id="t3" class="tecla num">3</button>
-                <button id="tx" class="tecla teclaOp op">x</button>
-                <button id="t0" class="tecla num">0</button>
-                <button id="tseparador" class="tecla num">,</button>
-                <button id="tigual" class="tecla teclaOp rest">=</button>
-                <button id="td" class="tecla teclaOp op">/</button>
+
+            <div id="calc_aba" class="calc_aba">
+                <i class="fa-solid fa-angles-right"></i>
             </div>
         </div>
-
-        <input type="text" name="teste" id="teste" style="border: 1px solid #000; display: block; margin-inline: auto; margin-top: 5px; height: 20px; width: 245px;">
-
     </body>
 </html>

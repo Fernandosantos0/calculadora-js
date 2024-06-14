@@ -7,7 +7,8 @@ const display = document.querySelector('.display');
 const tlimpar = document.querySelector('#tlimpar');
 const tigual = document.querySelector('#tigual');
 const tcopy = document.querySelector('#tcopy');
-const teste = document.querySelector('#teste');
+const calc_aba = document.querySelector('#calc_aba');
+const calc = document.querySelector('#calc');
 
 let sinal = false;
 let decimal = false;
@@ -72,11 +73,33 @@ tigual.addEventListener('click', event => {
     display.innerHTML = resultado;
 });
 
-/* Funcionalidade para copia na área de transferência */
-tcopy.addEventListener('click', event => {
-    // navigator.clipboard.writeText(display.innerHTML);
+function criarIcone(tag, classes) {
+    const el = document.createElement(tag);
 
-    teste.select();
-    teste.setSelectionRange(0, 99999); // Mobile
-    navigator.clipboard.writeText(teste.value);
+    classes.forEach(classe => {
+        el.classList += classe;
+        el.classList += ' ';
+    });
+
+    return el;
+}
+
+calc_aba.addEventListener('click', event => {
+    calc.classList.toggle('calc_exibir');
+
+    if(calc.classList.contains('calc_exibir')) {
+        calc_aba.innerHTML = '';
+
+        const icone = criarIcone('i', ['fa-solid', 'fa-angles-left']);
+        calc_aba.appendChild(icone);        
+    } else {
+        calc_aba.innerHTML = '';
+
+        const icone = criarIcone('i', ['fa-solid', 'fa-angles-right']);
+        calc_aba.appendChild(icone);
+    }
+});
+
+tcopy.addEventListener('click', event => {
+    navigator.clipboard.writeText(display.innerText);
 });
